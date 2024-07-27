@@ -1,0 +1,15 @@
+*.csv
+*.O
+*.xlsx
+*.zip
+*.tar.gz
+*.jar
+*.png
+*.rds
+*.parquet
+
+Anaconda3-2023.03-Linux-x86_64.sh
+/.dvc/
+/pyflink
+
+/data-streams/Socket/node_modules

@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.21996-SP0",
+    "python": "3.12.3",
+    "heartbeatAt": "2024-07-27T16:49:36.394854",
+    "startedAt": "2024-07-27T16:49:22.228984",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "ad-hoc-notebooks/text_classification_transformer.ipynb",
+    "codePathLocal": null,
+    "root": "D:/CoreOutline/transformer",
+    "git": {
+        "remote": "https://github.com/Core-Outline/core-transformer-network.git",
+        "commit": "643bb179ce6279f9d1edb28f5df1bc6ca81ccc80"
+    },
+    "email": "tommytsuma7@gmail.com",
+    "host": "DESKTOP-MN2KUGJ",
+    "username": "tommy",
+    "executable": "C:\\Python312\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2592.0,
+        "min": 0.0,
+        "max": 2592.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2592.0,
+            "min": 0.0,
+            "max": 2592.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 281.24901962280273,
+            "used": 163.3330841064453
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1660 Ti with Max-Q Design",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1660 Ti with Max-Q Design",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 15.811206817626953
+    }
+}

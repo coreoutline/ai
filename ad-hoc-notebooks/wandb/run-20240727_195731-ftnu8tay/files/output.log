@@ -1,0 +1,51 @@
+25000 Training sequences
+25000 Validation sequences
+Epoch 1/200
+
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 246ms/step - accuracy: 0.2632 - loss: 1.7630
+Epoch 1: saving model to training_2/cp-0001.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m8s[22m 306ms/step - accuracy: 0.2639 - loss: 1.7618 - val_accuracy: 0.2857 - val_loss: 1.6833 - learning_rate: 0.0100
+Epoch 2/200
+
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 245ms/step - accuracy: 0.3251 - loss: 1.6752
+Epoch 2: saving model to training_2/cp-0002.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 265ms/step - accuracy: 0.3221 - loss: 1.6754 - val_accuracy: 0.2857 - val_loss: 1.6008 - learning_rate: 0.0100
+Epoch 3/200
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 246ms/step - accuracy: 0.3516 - loss: 1.4846
+Epoch 3: saving model to training_2/cp-0003.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 267ms/step - accuracy: 0.3538 - loss: 1.4795 - val_accuracy: 0.3810 - val_loss: 1.4087 - learning_rate: 0.0100
+Epoch 4/200
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 255ms/step - accuracy: 0.4899 - loss: 1.1807
+Epoch 4: saving model to training_2/cp-0004.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 287ms/step - accuracy: 0.4940 - loss: 1.1733 - val_accuracy: 0.5079 - val_loss: 1.0759 - learning_rate: 0.0100
+Epoch 5/200
+
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 245ms/step - accuracy: 0.5875 - loss: 0.8128
+Epoch 5: saving model to training_2/cp-0005.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 266ms/step - accuracy: 0.5891 - loss: 0.8140 - val_accuracy: 0.6349 - val_loss: 1.0112 - learning_rate: 0.0100
+Epoch 6/200
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 241ms/step - accuracy: 0.6769 - loss: 0.6968
+Epoch 6: saving model to training_2/cp-0006.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 261ms/step - accuracy: 0.6787 - loss: 0.6955 - val_accuracy: 0.7143 - val_loss: 1.0744 - learning_rate: 0.0100
+Epoch 7/200
+
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 242ms/step - accuracy: 0.8355 - loss: 0.4655
+Epoch 7: saving model to training_2/cp-0007.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 262ms/step - accuracy: 0.8357 - loss: 0.4659 - val_accuracy: 0.7460 - val_loss: 0.9069 - learning_rate: 0.0100
+Epoch 8/200
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 242ms/step - accuracy: 0.8213 - loss: 0.5161
+Epoch 8: saving model to training_2/cp-0008.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 262ms/step - accuracy: 0.8200 - loss: 0.5210 - val_accuracy: 0.7143 - val_loss: 1.1929 - learning_rate: 0.0100
+Epoch 9/200
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 240ms/step - accuracy: 0.8850 - loss: 0.4406
+Epoch 9: saving model to training_2/cp-0009.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 260ms/step - accuracy: 0.8854 - loss: 0.4376 - val_accuracy: 0.8095 - val_loss: 0.7076 - learning_rate: 0.0100
+Epoch 10/200
+
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 240ms/step - accuracy: 0.9041 - loss: 0.2696
+Epoch 10: saving model to training_2/cp-0010.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 260ms/step - accuracy: 0.9044 - loss: 0.2696 - val_accuracy: 0.7937 - val_loss: 0.8825 - learning_rate: 0.0100
+Epoch 11/200
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m0s[22m 244ms/step - accuracy: 0.9314 - loss: 0.2422
+Epoch 11: saving model to training_2/cp-0011.keras
+[1m12/12[22m [32m━━━━━━━━━━━━━━━━━━━━[39m [1m3s[22m 266ms/step - accuracy: 0.9321 - loss: 0.2405 - val_accuracy: 0.7778 - val_loss: 1.0005 - learning_rate: 0.0100
