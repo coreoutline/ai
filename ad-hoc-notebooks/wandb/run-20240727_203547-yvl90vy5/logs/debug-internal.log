@@ -1,5 +1,0 @@
-2024-07-27 20:35:47,624 INFO    StreamThr :24620 [internal.py:wandb_internal():85] W&B internal server running at pid: 24620, started at: 2024-07-27 20:35:47.623751
-2024-07-27 20:35:47,626 DEBUG   HandlerThread:24620 [handler.py:handle_request():158] handle_request: status
-2024-07-27 20:35:47,631 INFO    WriterThread:24620 [datastore.py:open_for_write():87] open: D:\CoreOutline\transformer\ad-hoc-notebooks\wandb\run-20240727_203547-yvl90vy5\run-yvl90vy5.wandb
-2024-07-27 20:35:47,632 DEBUG   SenderThread:24620 [sender.py:send():379] send: header
-2024-07-27 20:35:47,672 DEBUG   SenderThread:24620 [sender.py:send():379] send: run

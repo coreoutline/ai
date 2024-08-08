@@ -1,0 +1,275 @@
+2024-08-01 19:06:16,918 INFO    MainThread:3580 [wandb_setup.py:_flush():76] Current SDK version is 0.17.5
+2024-08-01 19:06:16,918 INFO    MainThread:3580 [wandb_setup.py:_flush():76] Configure stats pid to 3580
+2024-08-01 19:06:16,918 INFO    MainThread:3580 [wandb_setup.py:_flush():76] Loading settings from C:\Users\tommy\.config\wandb\settings
+2024-08-01 19:06:16,918 INFO    MainThread:3580 [wandb_setup.py:_flush():76] Loading settings from D:\CoreOutline\transformer\ad-hoc-notebooks\wandb\settings
+2024-08-01 19:06:16,918 INFO    MainThread:3580 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_init.py:_log_setup():529] Logging user logs to D:\CoreOutline\transformer\ad-hoc-notebooks\wandb\run-20240801_190616-geklsrj7\logs\debug.log
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_init.py:_log_setup():530] Logging internal logs to D:\CoreOutline\transformer\ad-hoc-notebooks\wandb\run-20240801_190616-geklsrj7\logs\debug-internal.log
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_init.py:_jupyter_setup():475] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001FC86C3C970>
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_init.py:init():569] calling init triggers
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {}
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_init.py:init():619] starting backend
+2024-08-01 19:06:16,920 INFO    MainThread:3580 [wandb_init.py:init():623] setting up manager
+2024-08-01 19:06:16,922 INFO    MainThread:3580 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2024-08-01 19:06:16,926 INFO    MainThread:3580 [wandb_init.py:init():631] backend started and connected
+2024-08-01 19:06:16,928 INFO    MainThread:3580 [wandb_run.py:_label_probe_notebook():1334] probe notebook
+2024-08-01 19:06:16,944 INFO    MainThread:3580 [wandb_init.py:init():720] updated telemetry
+2024-08-01 19:06:17,006 INFO    MainThread:3580 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-08-01 19:06:17,752 INFO    MainThread:3580 [wandb_run.py:_on_init():2435] communicating current version
+2024-08-01 19:06:18,441 INFO    MainThread:3580 [wandb_run.py:_on_init():2444] got version response 
+2024-08-01 19:06:18,441 INFO    MainThread:3580 [wandb_init.py:init():804] starting run threads in backend
+2024-08-01 19:06:21,705 INFO    MainThread:3580 [wandb_run.py:_console_start():2413] atexit reg
+2024-08-01 19:06:21,705 INFO    MainThread:3580 [wandb_run.py:_redirect():2255] redirect: wrap_raw
+2024-08-01 19:06:21,705 INFO    MainThread:3580 [wandb_run.py:_redirect():2320] Wrapping output streams.
+2024-08-01 19:06:21,705 INFO    MainThread:3580 [wandb_run.py:_redirect():2345] Redirects installed.
+2024-08-01 19:06:21,705 INFO    MainThread:3580 [wandb_init.py:init():847] run started, returning control to user process
+2024-08-01 19:06:21,705 INFO    MainThread:3580 [wandb_config.py:__setitem__():151] config set more = custom - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001FC8E6C3460>>
+2024-08-01 19:06:21,705 INFO    MainThread:3580 [wandb_run.py:_config_callback():1382] config_cb more custom None
+2024-08-01 19:06:21,705 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:22,346 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:22,346 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:22,362 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:22,385 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:22,791 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:22,791 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:22,807 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:23,053 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:23,475 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:23,475 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:23,491 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:23,514 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:23,920 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:23,920 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:23,943 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:23,946 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:24,350 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:24,350 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:24,372 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:24,373 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:24,820 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:24,820 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:24,840 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:29,923 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:30,352 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:30,352 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:30,370 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:31,363 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:31,938 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:31,938 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:31,958 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:32,298 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:32,843 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:32,843 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:32,858 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:32,858 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:33,454 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:33,454 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:33,472 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:34,990 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:35,414 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:35,414 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:35,430 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:35,459 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:35,914 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:35,914 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:35,933 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:43,701 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:44,155 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:44,155 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:44,181 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:44,181 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:44,611 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:44,611 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:44,637 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:54,414 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:54,861 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:54,861 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:54,880 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:54,892 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:55,295 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:55,295 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:55,314 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:55,316 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:55,745 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:55,745 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:55,764 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:55,819 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:56,467 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:56,467 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:56,503 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:56,512 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:56,938 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:56,938 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:56,975 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:06:56,976 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:06:57,408 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:06:57,408 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:06:57,426 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:05,563 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:05,994 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:05,994 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:06,014 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:06,021 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:06,441 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:06,441 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:06,475 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:06,480 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:06,906 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:06,906 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:06,941 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:14,498 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:15,123 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:15,123 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:15,142 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:15,151 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:15,553 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:15,553 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:15,573 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:15,584 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:16,007 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:16,007 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:16,042 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:16,520 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:16,941 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:16,941 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:16,960 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:16,969 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:17,381 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:17,381 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:17,399 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:17,421 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:17,816 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:17,816 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:17,832 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:20,386 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:20,823 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:20,823 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:20,839 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:21,066 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:21,487 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:21,487 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:21,518 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:21,533 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:22,013 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:22,013 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:22,032 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:22,036 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:22,434 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:22,434 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:22,453 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:22,458 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:22,870 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:22,870 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:22,889 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:22,893 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:23,289 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:23,289 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:23,304 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:23,308 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:23,718 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:23,718 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:23,750 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:23,755 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:24,143 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:24,143 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:24,171 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:24,171 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:24,633 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:24,633 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:24,653 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:24,653 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:25,089 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:25,089 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:25,104 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:25,104 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:25,515 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:25,515 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:25,534 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:25,541 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:25,964 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:25,964 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:25,984 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 19:07:25,997 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 19:07:26,407 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 19:07:26,407 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 19:07:26,426 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:03:41,454 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:03:42,209 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:03:42,209 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:03:42,220 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:03:42,225 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:03:42,660 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:03:42,660 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:03:42,667 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:01,099 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:01,534 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:01,534 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:04:01,543 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:01,589 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:02,043 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:02,043 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:04:02,062 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:02,076 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:02,560 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:02,560 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:04:02,564 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:08,726 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:09,183 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:09,183 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:04:09,202 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:09,249 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:09,792 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:09,793 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:04:09,809 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:09,819 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:10,418 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:10,418 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:04:10,434 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:10,441 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:11,019 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:11,019 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:04:11,037 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:11,040 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:11,710 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:11,710 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-01 20:04:11,719 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-01 20:04:11,996 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-01 20:04:12,662 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-01 20:04:12,662 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 09:22:25,248 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-02 09:22:39,685 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-02 09:22:40,729 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-02 09:22:40,729 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 09:22:46,283 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-02 09:22:46,324 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-02 09:22:46,866 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-02 09:22:46,866 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 09:22:48,883 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-02 09:22:48,888 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-02 09:22:49,324 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-02 09:22:49,324 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 09:22:53,085 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-02 09:22:57,955 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-02 09:22:58,371 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-02 09:22:58,371 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 09:23:02,101 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-02 09:23:02,128 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-02 09:23:02,570 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-02 09:23:02,570 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 09:23:12,243 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-02 09:23:12,252 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-02 09:23:13,675 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-02 09:23:13,675 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 09:23:13,685 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-02 09:23:13,693 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-02 09:23:14,191 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-02 09:23:14,191 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 09:23:17,787 INFO    MainThread:3580 [wandb_init.py:_resume_backend():445] resuming backend
+2024-08-02 10:05:48,566 INFO    MainThread:3580 [jupyter.py:_save_ipynb():383] looking for notebook: text_classification_transformer.ipynb
+2024-08-02 10:05:49,026 INFO    MainThread:3580 [wandb_init.py:_pause_backend():438] saved code: <Artifact source-bitext_customer_support-text_classification_transformer.ipynb>
+2024-08-02 10:05:49,026 INFO    MainThread:3580 [wandb_init.py:_pause_backend():440] pausing backend
+2024-08-02 12:47:50,807 WARNING MsgRouterThr:3580 [router.py:message_loop():77] message_loop has been closed
