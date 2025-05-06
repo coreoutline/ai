@@ -13,3 +13,11 @@ Anaconda3-2023.03-Linux-x86_64.sh
 /pyflink
 
 /data-streams/Socket/node_modules
+
+
+*.pth
+*.h5
+*.ckpt
+*.pt
+
+*.keras

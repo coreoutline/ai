@@ -37,6 +37,14 @@ def train_model_simple(config):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     optimizer = torch.optim.AdamW(model.parameters(), lr=config['lr'], weight_decay=0.1)
     criterion = nn.CrossEntropyLoss()
+
+    checkpoint = {
+    'epoch': epoch,
+    'model_state_dict': model.state_dict(),
+    'optimizer_state_dict': optimizer.state_dict(),
+    'loss': loss
+    }
+
     for epoch in range(num_epochs):
         print(f"Epoch {epoch+1} training start...")
         model.to(device)
