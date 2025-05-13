@@ -29,7 +29,6 @@ mem = round(mem.total / 1000000000, 1)
 df = pd.read_parquet("hf://datasets/core-outline/nyx-finance-instruct/data/train-00000-of-00001.parquet")
 
 def formatData(entry):
-    print(entry)
     instruction_text = (
         f"Below is an instruction that describes a task. "
         f"Write a response that appropriately completes the request."
@@ -44,7 +43,6 @@ def formatData(entry):
     return instruction_text + input_text + desired_response
 
 def format_input(entry):
-    print(entry)
     instruction_text = (
         f"Below is an instruction that describes a task. "
         f"Write a response that appropriately completes the request."
@@ -172,7 +170,7 @@ CONFIG={
 }
 
 model =  CoreModel(CONFIG)
-model_state_dict = torch.load(f"C://Users/tsuma.thomas/Downloads/core_foundation_2.pth")
+model_state_dict = torch.load(f"./models/nyx.pth")
 model.load_state_dict(model_state_dict)
 
 model.eval()
