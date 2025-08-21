@@ -748,7 +748,9 @@ with torch.no_grad():
 
 
 
-df = pd.read_parquet("hf://datasets/core-outline/nyx-finance-instruct/data/train-00000-of-00001.parquet")
+# df = pd.read_parquet("hf://datasets/core-outline/nyx-finance-instruct/data/train-00000-of-00001.parquet")
+df = pd.read_parquet("hf://datasets/DeividasM/financial-instruction-aq22/data/train-00000-of-00001.parquet")
+df = df.rename(columns={"instruction": "prompts", "output": "answers"})
 
 def formatData(entry):
     instruction_text = (
@@ -855,7 +857,8 @@ test_loader = DataLoader(
 )
 
 
-model_state_dict = torch.load(f"/root/chaos_2.pth")
+model_state_dict = torch.load(f"./models/nyx_2.pth")
+# model_state_dict = torch.load(f"/root/chaos_2.pth")
 core_model.load_state_dict(model_state_dict)
 core_model.to("cpu")
 
@@ -923,11 +926,11 @@ def train_model_simple( model, train_loader, val_loader, start_context=format_in
     eval_iter = 2
 
     # Initialize wandb
-    wandb.init(
-        project="nyx-finetune",
-        name="nyx-finetune-run"
-    )
-    wandb.watch(model, log="all", log_freq=10)
+    # wandb.init(
+    #     project="nyx-finetune",
+    #     name="nyx-finetune-run"
+    # )
+    # wandb.watch(model, log="all", log_freq=10)
 
     train_losses, val_losses, track_tokens_seen = [], [], []
     tokens_seen, global_step = 0, -1
@@ -937,11 +940,12 @@ def train_model_simple( model, train_loader, val_loader, start_context=format_in
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=50, eta_min=6e-6)
     print(scheduler.get_last_lr()[0])
     curr_loss = None
+    model.to(device)
     for epoch in range(num_epochs):
 
         print(f"Epoch {epoch+1} training start...")
         model.train()
-        for input_batch, target_batch in tqdm(train_loader, desc=f"Epoch {epoch+1}"):
+        for input_batch, target_batch in train_loader:
             
             optimizer.zero_grad()
             loss = calc_loss_batch(
@@ -973,26 +977,27 @@ def train_model_simple( model, train_loader, val_loader, start_context=format_in
                 print(tokenizer.decode(token_ids[0]))
                 model.train()
                 # Log metrics and example output to wandb
-                wandb.log({
-                    "epoch": epoch + 1,
-                    "global_step": global_step,
-                    "train_loss": train_loss,
-                    "val_loss": val_loss,
-                    "tokens_seen": tokens_seen,
-                    "learning_rate": scheduler.get_last_lr()[0]
-                }, step=global_step)
+                # wandb.log({
+                #     "epoch": epoch + 1,
+                #     "global_step": global_step,
+                #     "train_loss": train_loss,
+                #     "val_loss": val_loss,
+                #     "tokens_seen": tokens_seen,
+                #     "learning_rate": scheduler.get_last_lr()[0]
+                # }, step=global_step)
                 print(f"Ep {epoch+1} (Step {global_step:06d}): "
                       f"Train loss {train_loss:.3f}, "
                       f"Val loss {val_loss:.3f}"
                 )
 
             curr_loss = loss.item()
-            torch.save(model.state_dict(), f"/root/transformers/models/nyx_2.pth")
+            torch.save(model.state_dict(), f"./models/nyx_2.pth")
+            # torch.save(model.state_dict(), f"/root/transformers/models/nyx_2.pth")
             # Log model checkpoint to wandb
 
             
             model.train()
-    wandb.finish()
+    # wandb.finish()
     return train_losses, val_losses, track_tokens_seen
 
 start_time = time.time()

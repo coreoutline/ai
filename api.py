@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+
 import uvicorn
 import torch
 from transformers import AutoTokenizer
@@ -8,6 +9,12 @@ from model_2 import core_model
 import time
 import json
 import asyncio
+import os
+import google.generativeai as genai
+from dotenv import load_dotenv
+import re
+load_dotenv()
+torch.set_num_threads(torch.get_num_interop_threads()) 
 
 app = FastAPI(title="Transformer API")
 
@@ -37,7 +44,7 @@ core_model.to(device)
 def format_input(entry):
     instruction_text = (
         f"Below is an instruction that describes a task. "
-        f"Write a response in markdown format that appropriately completes the request."
+        f"Write a response that appropriately completes the request."
         f"\n\n ### Instruction:\n{entry['prompt'].strip().replace('<prompt>','').replace('</prompt>','')}"
     )
     input_text = (
@@ -108,7 +115,8 @@ async def predict_stream(request: Request):
     """Streaming prediction endpoint using Server-Sent Events"""
     data = await request.json()
     text = data["prompt"]
-    
+    with open("prompts.log", "a") as f:
+        f.write(f"Prompt: {text}\n")
     input_text = format_input({"prompt": text})
     inputs = tokenizer(input_text, return_tensors="pt")
     
@@ -147,5 +155,19 @@ async def predict_stream(request: Request):
         }
     )
 
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+model = genai.GenerativeModel("gemini-2.0-flash") 
+def ask_gemini(query: str) -> str:
+    global model
+    prompt = query
+    response = model.generate_content(prompt)
+    json_pattern = '\{.*\}'
+    json_match = re.findall(json_pattern, response.text, flags=re.DOTALL)
+
+    return json.loads(json_match[0])
+
+@app.get("/suggestions")
+async def suggestions():
+    return JSONResponse(content = ask_gemini("I want you to suggest five potential questions I can ask an LLM that was trained purely on financial, SaaS, Social Media, Customer, and Customer Feedback analytics data. Return the questions in a JSON array in the format {\"questions\": [{\"metric_type\": \"Financial Analytics\", \"question\": \"question 1\"}, {\"metric_type\": \"SaaS\", \"question\": \"question 2\"}, {\"metric_type\": \"Social Media\", \"question\": \"question 3\"}, {\"metric_type\": \"Customer\", \"question\": \"question 4\"}, {\"metric_type\": \"Customer Feedback\", \"question\": \"question 5\"}]}"))
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=6000, access_log=False, log_level="info")

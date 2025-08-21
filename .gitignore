@@ -21,3 +21,8 @@ Anaconda3-2023.03-Linux-x86_64.sh
 *.pt
 
 *.keras
+
+node_modules
+
+/models
+/models/*
