@@ -1,1 +1,0 @@
-python3 generate_instruct.py -m /home/core/cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4 -e cpu -l 2048
