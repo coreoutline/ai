@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# PyTorch & Machine Learning
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.keras
+*.onnx
+/models/
+/checkpoints/
+
+# Datasets & Data Formats
+*.csv
+*.tsv
+*.xlsx
+*.rds
+*.parquet
+*.zip
+*.tar.gz
+*.tar
+*.jar
+*.png
+*.sqlite3
+/data/
+/tokens/
+/tokenizer/
+
+# Logging & Tracking
+*.log
+wandb/
+/history/
+/.dvc/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# IDEs & OS Files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Node / JS
+node_modules/
+
+# Custom / Others
+*.O
+Anaconda3*.sh
+/pyflink
+/data-streams/
