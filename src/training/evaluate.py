@@ -30,6 +30,15 @@ def _extract_logits(output: Any) -> torch.Tensor:
     raise ValueError("Model output must be a tensor or dict containing 'logits'")
 
 
+def calculate_loss(model: torch.nn.Module, batch, device: torch.device) -> torch.Tensor:
+    if isinstance(batch, dict):
+        input_batch = batch["input_ids"]
+        target_batch = batch["labels"]
+    else:
+        input_batch, target_batch = batch
+    return calc_loss_batch(input_batch, target_batch, model, device)
+
+
 def calc_loss_batch(input_batch: torch.Tensor, target_batch: torch.Tensor, model: torch.nn.Module, device: torch.device) -> torch.Tensor:
     input_batch = input_batch.to(device)
     target_batch = target_batch.to(device)

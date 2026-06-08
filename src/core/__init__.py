@@ -4,3 +4,4 @@ from .attention_transformer import CoreOutlineAttention
 from .decoder_layer import CoreOutlineDecoderLayer
 from .decoder import CoreOutlineModel
 from .transformer import CoreOutlineForCausalLM, CoreOutlineConfig, create_coreoutline_qwen_model
+from .base_transformer import CoreModel

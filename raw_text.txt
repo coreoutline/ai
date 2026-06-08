@@ -25421,9 +25421,8 @@ import pyarrow.parquet as pq
 import io
 
 access_key = os.environ['AWS_ACCESS_KEY']
-access_secret = os.environ['AWS_SECRET']
-# access_key = "os.environ['AWS_ACCESS_KEY']"
-# access_secret = "os.environ['AWS_SECRET']"
+access_secret = os.environ.get('AWS_SECRET', '')
+# access_secret = os.environ.get('AWS_SECRET', '')
 # os.environ['JAVA_HOME'] = "D:\Programs\Java\jre"
 # os.environ['HADOOP_HOME'] = "D://Programs/hadoop/hadoop-3.3.5"
 # os.environ['hadoop.home.dir'] = "D://Programs/hadoop-3.3.5/bin"
