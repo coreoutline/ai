@@ -61,6 +61,7 @@ ENV/
 /checkpoints/
 
 # Datasets & Data Formats
+*.txt
 *.csv
 *.tsv
 *.xlsx
