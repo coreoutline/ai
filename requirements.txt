@@ -2,9 +2,13 @@ fastapi==0.109.0
 uvicorn==0.27.0
 torch
 transformers==4.36.2
+<<<<<<< HEAD
 python-multipart==0.0.6
 pandas
 psutil
 tqdmpandas
 psutil
 tqdm
+=======
+python-multipart==0.0.6
+>>>>>>> ceed60d4c402c07868cdf168b235dcd6395f76b7
