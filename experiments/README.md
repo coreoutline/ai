@@ -174,10 +174,10 @@ Fine-tunes CoreOutline Qwen on Salesforce xLAM function-calling examples. Data l
 **Smoke test (1k samples):**
 
 ```bash
-python experiments/training/fine_tune_tool_calling.py \
-  --csv-path ./data/xlam_function_calling_60k.csv \
-  --checkpoint ./models/nyx_2_tool_calling.pth \
-  --base-checkpoint ./models/nyx_2.pth \
+python3 experiments/training/fine_tune_tool_calling.py \
+  --csv-path ./data/xlam-function-calling-60k.csv \
+  --checkpoint ./models/nyx_2_latest_1.pth \
+  --base-checkpoint ./models/nyx_2_tool_calling.pth \
   --epochs 1 \
   --batch-size 4 \
   --max-samples 1000
