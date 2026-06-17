@@ -53,6 +53,15 @@ def train_model_simple(
     best_val_loss = float("inf")
     epochs_without_improvement = 0
 
+    # Warn when val_loader is too small to give reliable loss estimates.
+    val_batches = len(val_loader)
+    if val_batches < 5:
+        print(
+            f"[WARNING] val_loader only has {val_batches} batch(es). "
+            "Val loss will be noisy and early stopping may fire too soon. "
+            "Use the full 60k dataset or pass --patience 0 to disable early stopping."
+        )
+
     for epoch in range(num_epochs):
         print(f"Epoch {epoch+1} training start...")
         model.train()

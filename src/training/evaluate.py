@@ -48,7 +48,7 @@ def calc_loss_batch(input_batch: torch.Tensor, target_batch: torch.Tensor, model
     if logits.ndim == 3:
         logits = logits.flatten(0, 1)
         target_batch = target_batch.flatten()
-    loss = torch.nn.functional.cross_entropy(logits, target_batch)
+    loss = torch.nn.functional.cross_entropy(logits, target_batch, ignore_index=-100)
     return loss
 
 
