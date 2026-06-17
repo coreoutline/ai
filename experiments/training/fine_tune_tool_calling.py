@@ -61,6 +61,12 @@ def parse_args():
         help="Limit dataset size for smoke tests (default: use full dataset)",
     )
     parser.add_argument("--lr", type=float, default=5e-5)
+    parser.add_argument(
+        "--patience",
+        type=int,
+        default=5,
+        help="Early stopping: eval steps without val_loss improvement before stopping (default: 5)",
+    )
     return parser.parse_args()
 
 
@@ -128,6 +134,7 @@ def main():
         generate_max_new_tokens=256,
         generate_context_size=args.allowed_max_length,
         generate_eos_id=tokenizer.eos_token_id or 151643,
+        patience=args.patience,
     )
 
     end_time = time.time()
