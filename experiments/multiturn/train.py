@@ -21,7 +21,12 @@ from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 
 from experiments.gating.metrics import router_health
-from experiments.multiturn.config import MultiTurnConfig, build_model_config, use_nyx_architecture
+from experiments.multiturn.config import (
+    MultiTurnConfig,
+    build_model_config,
+    resolve_vocab_size,
+    use_nyx_architecture,
+)
 from experiments.multiturn.data import (
     MultiTurnDataset,
     build_examples,
@@ -90,7 +95,7 @@ def train(cfg: MultiTurnConfig):
     dl = lambda ds, sh: DataLoader(MultiTurnDataset(ds), batch_size=cfg.batch_size, shuffle=sh, collate_fn=coll)
     train_loader, val_loader = dl(train_ex, True), dl(val_ex, False)
 
-    model_cfg = build_model_config(cfg, tok.vocab_size, pad_id, tok.eos_token_id)
+    model_cfg = build_model_config(cfg, resolve_vocab_size(cfg, tok), pad_id, tok.eos_token_id)
     model = CoreModelForCausalLM(model_cfg)
     if cfg.init_weights_path:
         print(f"Loading init weights (strict=False): {cfg.init_weights_path}")

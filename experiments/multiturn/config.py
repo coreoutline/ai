@@ -41,6 +41,9 @@ class MultiTurnConfig:
     eval_every: int = 200
     seed: int = 42
 
+    # --- vocab (None = derive from tokenizer; nyx pins it to the checkpoint) ---
+    vocab_size: Optional[int] = None
+
     # --- warm start ---
     init_weights_path: Optional[str] = None
 
@@ -58,7 +61,23 @@ def use_nyx_architecture(cfg: MultiTurnConfig) -> MultiTurnConfig:
     cfg.num_key_value_heads = 16
     cfg.max_position_embeddings = max(cfg.max_position_embeddings, 2048)
     cfg.gate_layer_indices = [12]
+    # nyx_reasoning was trained with a padded embedding of 151936 rows; the
+    # embedding must match the checkpoint exactly for warm-start to load.
+    cfg.vocab_size = 151936
     return cfg
+
+
+def resolve_vocab_size(cfg: MultiTurnConfig, tokenizer) -> int:
+    """Safe vocab size: honor an explicit cfg value, else cover every token id.
+
+    Qwen's ``tokenizer.vocab_size`` excludes added special tokens, so the real
+    pad/eos ids can exceed it — the embedding must be large enough for all ids.
+    """
+    pad_id = tokenizer.pad_token_id if tokenizer.pad_token_id is not None else tokenizer.eos_token_id
+    eos_id = tokenizer.eos_token_id or 0
+    if cfg.vocab_size is not None:
+        return cfg.vocab_size
+    return max(len(tokenizer), tokenizer.vocab_size, pad_id + 1, eos_id + 1)
 
 
 def build_model_config(cfg: MultiTurnConfig, vocab_size: int, pad_id: int, eos_id: int):

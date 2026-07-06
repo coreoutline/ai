@@ -27,7 +27,12 @@ import torch
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 
-from experiments.multiturn.config import MultiTurnConfig, build_model_config, use_nyx_architecture
+from experiments.multiturn.config import (
+    MultiTurnConfig,
+    build_model_config,
+    resolve_vocab_size,
+    use_nyx_architecture,
+)
 from experiments.multiturn.data import (
     MultiTurnDataset,
     build_eval_records,
@@ -178,7 +183,7 @@ def main():
         tok.pad_token = tok.eos_token
     pad_id = tok.pad_token_id or tok.eos_token_id
 
-    model_cfg = build_model_config(cfg, tok.vocab_size, pad_id, tok.eos_token_id)
+    model_cfg = build_model_config(cfg, resolve_vocab_size(cfg, tok), pad_id, tok.eos_token_id)
     model = CoreModelForCausalLM(model_cfg).to(device)
     try:
         ckpt = torch.load(args.checkpoint, map_location=device, weights_only=False)

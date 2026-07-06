@@ -100,6 +100,8 @@ def use_nyx_architecture(exp: "ExperimentConfig") -> "ExperimentConfig":
     exp.num_key_value_heads = 16
     exp.max_position_embeddings = 32768
     exp.gate_layer_indices = [12]
+    # nyx_reasoning has a padded embedding of 151936 rows; must match for warm-start.
+    exp.vocab_size = 151936
     return exp
 
 
@@ -109,8 +111,14 @@ def build_model_config(exp: ExperimentConfig):
     from transformers import AutoTokenizer
 
     tok = AutoTokenizer.from_pretrained(exp.tokenizer_name)
-    vocab_size = tok.vocab_size
     pad_id = tok.pad_token_id if tok.pad_token_id is not None else tok.eos_token_id
+    eos_id = tok.eos_token_id or 0
+    # Qwen's tokenizer.vocab_size excludes added special tokens, so pad/eos ids
+    # can exceed it. Use an explicit exp.vocab_size when set (e.g. nyx=151936),
+    # else cover every token id. The embedding must be >= all ids.
+    vocab_size = getattr(exp, "vocab_size", None) or max(
+        len(tok), tok.vocab_size, pad_id + 1, eos_id + 1
+    )
 
     return CoreModelConfig(
         vocab_size=vocab_size,
