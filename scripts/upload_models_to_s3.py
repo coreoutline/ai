@@ -1,11 +1,11 @@
 #!/usr/bin/env python3.11
-"""Upload local datasets to the s3.ereuna.org object store (bronze layer).
+"""Upload local model checkpoints to the s3.ereuna.org object store.
 
 Usage:
-    python3.11 scripts/upload_datasets_to_s3.py
-    python3.11 scripts/upload_datasets_to_s3.py --dry-run
-    python3.11 scripts/upload_datasets_to_s3.py --source data --bucket nyx --prefix bronze/
-    python3.11 scripts/upload_datasets_to_s3.py --include "**/*.csv" --include "**/*.parquet"
+    python3.11 scripts/upload_models_to_s3.py
+    python3.11 scripts/upload_models_to_s3.py --dry-run
+    python3.11 scripts/upload_models_to_s3.py --source models --bucket nyx --prefix models/
+    python3.11 scripts/upload_models_to_s3.py --include "**/*.pth" --include "**/*.safetensors"
 
 Credentials are read from the environment (or a local .env file):
     S3_EREUNA_ENDPOINT_URL, S3_EREUNA_ACCESS_KEY, S3_EREUNA_SECRET_KEY
@@ -17,22 +17,22 @@ from pathlib import Path
 
 import _s3_common as s3
 
-DEFAULT_INCLUDE_GLOBS = ["**/*.csv"]
-DEFAULT_EXCLUDE_DIRS = {"_dl_smoke", "archive", "wandb", "ad-hoc-notebooks"}
+DEFAULT_INCLUDE_GLOBS = ["**/*"]
+DEFAULT_EXCLUDE_DIRS = {".git", "__pycache__"}
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--source", default="data", help="Local directory to upload from (default: data)")
+    parser.add_argument("--source", default="models", help="Local directory to upload from (default: models)")
     parser.add_argument("--bucket", default="nyx", help="Target bucket (default: nyx)")
-    parser.add_argument("--prefix", default="bronze/", help="Key prefix inside the bucket (default: bronze/)")
+    parser.add_argument("--prefix", default="models/", help="Key prefix inside the bucket (default: models/)")
     parser.add_argument(
         "--include", action="append", dest="include_globs",
-        help="Glob pattern (relative to --source) to include; repeatable. Default: **/*.csv",
+        help="Glob pattern (relative to --source) to include; repeatable. Default: **/* (everything)",
     )
     parser.add_argument(
         "--exclude-dir", action="append", dest="exclude_dirs", default=[],
-        help="Directory name to skip; repeatable. Defaults: _dl_smoke, archive, wandb, ad-hoc-notebooks",
+        help="Directory name to skip; repeatable. Defaults: .git, __pycache__",
     )
     parser.add_argument("--force", action="store_true", help="Re-upload even if a same-size object already exists")
     parser.add_argument("--dry-run", action="store_true", help="List what would be uploaded without transferring")
@@ -55,9 +55,10 @@ def main() -> int:
         s3.logger.warning("No files matched %s under %s (excluding %s)", include_globs, source, sorted(exclude_dirs))
         return 0
 
+    total_gb = sum(f.stat().st_size for f in files) / (1024 ** 3)
     s3.logger.info(
-        "Found %d file(s) under %s matching %s (excluding dirs: %s)",
-        len(files), source, include_globs, sorted(exclude_dirs),
+        "Found %d file(s) (%.1f GB) under %s matching %s (excluding dirs: %s)",
+        len(files), total_gb, source, include_globs, sorted(exclude_dirs),
     )
 
     jobs = [
